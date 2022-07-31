@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  api:
+    container_name: formulario-api
+    build: formulario-api
+    command: mvn spring-boot:run
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/usr/app
+
+  mobile:
+    container_name: formulario-mobile
+    build: formulario-mobile
+    command: npm start
+    ports:
+      - "19000:19000"
+      - "19001:19001"
+      - "19002:19002"
+      - "19006:19006"
+    volumes:
+      - .:/usr/app
