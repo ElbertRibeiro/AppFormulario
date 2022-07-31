@@ -8,7 +8,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - .:/usr/app
+      - .:/home/usr/app
 
   mobile:
     container_name: formulario-mobile
@@ -20,4 +20,4 @@ services:
       - "19002:19002"
       - "19006:19006"
     volumes:
-      - .:/usr/app
+      - .:/home/usr/app
